@@ -108,6 +108,10 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
   const hours = document.getElementById('restaurant-hours');
   for (let key in operatingHours) {
     const row = document.createElement('tr');
+/* Adding focus to the table rows*/
+    row.tabIndex = "0";
+    row.focus();
+
 
     const day = document.createElement('td');
     day.innerHTML = key;
@@ -127,6 +131,9 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
 fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
   const title = document.createElement('h2');
+  /* Adding focus to the review */
+  title.tabIndex = "0";
+  title.focus();
   title.innerHTML = 'Reviews';
   container.appendChild(title);
 
@@ -148,6 +155,9 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
  */
 createReviewHTML = (review) => {
   const li = document.createElement('li');
+  /* Adding focus to the review li*/
+  li.tabIndex = "0";
+  li.focus();
   const name = document.createElement('p');
   name.innerHTML = review.name;
   li.appendChild(name);
@@ -173,6 +183,9 @@ createReviewHTML = (review) => {
 fillBreadcrumb = (restaurant=self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
   const li = document.createElement('li');
+  /* Adding focus to the  breadcrumbṣ li*/
+  li.tabIndex = "0";
+  li.focus();
   li.innerHTML = restaurant.name;
   breadcrumb.appendChild(li);
 }
