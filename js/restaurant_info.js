@@ -106,6 +106,8 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
  */
 fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => {
   const hours = document.getElementById('restaurant-hours');
+  /* Adding aria-label to hours table to give more info */
+  hours.setAttribute('aria-label', 'restaurant operating hours');
   for (let key in operatingHours) {
     const row = document.createElement('tr');
 /* Adding focus to the table rows*/
